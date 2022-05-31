@@ -1,0 +1,51 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.container {
+  margin-left: auto;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -10px;
+}
+.info {
+  display: flex;
+  margin: -5px;
+  &-item {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+  }
+}
+.photo-card {
+  margin: 10px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 193, 111);
+  padding: 15px;
+  margin-bottom: 16px;
+  margin-left: auto;
+}
+
+.load-more {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  font-family: sans-serif;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+.hidden {
+  display: none;
+  pointer-events: none;
+}
