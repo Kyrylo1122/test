@@ -47,7 +47,7 @@ function renderCards() {
     galleryContainer.insertAdjacentHTML('beforeend', allCards);
     simpleLightBox.refresh();
     removeHiddenClassLoadBtn();
-    const totalPage = Math.floor(data.total / elPerPage);
+    const totalPage = Math.floor(data.totalHits / elPerPage);
     if (page > totalPage) {
       Notiflix.Notify.info(
         "We're sorry, but you've reached the end of search results."
