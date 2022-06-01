@@ -1,3 +1,12 @@
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
+import { templateCard } from './script/templateCard';
+import { fetchedCards } from './script/fetchedCard';
+import { addHiddenClassToLoadBtn } from './script/loadBtnFeatures';
+import { removeHiddenClassLoadBtn } from './script/loadBtnFeatures';
+import Notiflix from 'notiflix';
+
 const form = document.querySelector('form');
 const input = document.querySelector('[name="searchQuery"]');
 const galleryContainer = document.querySelector('.gallery');
@@ -16,15 +25,6 @@ function loadMoreElements(e) {
   page += 1;
   renderCards();
 }
-
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
-
-import { templateCard } from './script/templateCard';
-import { fetchedCards } from './script/fetchedCard';
-import { addHiddenClassToLoadBtn } from './script/loadBtnFeatures';
-import { removeHiddenClassLoadBtn } from './script/loadBtnFeatures';
-import Notiflix from 'notiflix';
 
 function searchSubmit(e) {
   e.preventDefault();
