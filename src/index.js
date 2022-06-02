@@ -15,6 +15,7 @@ const loadMoreBtn = document.querySelector('.load-more');
 const elPerPage = 40;
 
 let page = 1;
+let valid = /\W/;
 
 const simpleLightBox = new SimpleLightbox('.gallery a');
 
@@ -23,6 +24,7 @@ loadMoreBtn.addEventListener('click', loadMoreElements);
 
 function loadMoreElements(e) {
   page += 1;
+
   renderCards();
 }
 
@@ -30,7 +32,10 @@ function searchSubmit(e) {
   e.preventDefault();
   galleryContainer.innerHTML = '';
   page = 1;
-
+  if (input.value.match(valid) || input.value === '') {
+    addHiddenClassToLoadBtn();
+    return;
+  }
   renderCards();
 }
 function renderCards() {
